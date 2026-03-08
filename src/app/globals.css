@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  /* F1 Theme Colors */
+  --background: #15151e;
+  --foreground: #ffffff;
+  --f1-red: #e10600;
+  --border-color: #38383f;
+  --card-bg: #000000;
+  --card-hover: #1f1f27;
+  --btn-background: #38383f;
+  --btn-background-hover: #505056;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Titillium Web", var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+  
+  --color-f1-red: var(--f1-red);
+  --color-f1-border: var(--border-color);
+  --color-f1-card: var(--card-bg);
+  --color-f1-card-hover: var(--card-hover);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  letter-spacing: 0.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Base styles for tables */
+table {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+th {
+  color: #a8a8aa;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--border-color);
+  padding: 1rem;
+}
+
+td {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem;
+}
+
+tr:hover td {
+  background-color: var(--card-hover);
+}
+
+/* Base Form Elements */
+input, select {
+  background-color: var(--background);
+  border-color: var(--border-color);
+  color: var(--foreground);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--f1-red);
+  box-shadow: 0 0 0 1px var(--f1-red);
+}
+
+.f1-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
